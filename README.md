@@ -63,9 +63,9 @@ Building and deploying the repository requires the folowing commands:
  ```
  This command was used to create the Docker image:
  
- ```
- sudo docker build -t gcr.io/${**enter your ID from the last step here**}/location .
- ```
+ <pre>
+ sudo docker build -t gcr.io/${<b>enter your ID from the last step here</b>}/location .
+ </pre>
  You can check to see id the image was built with this command:
  ```
  sudo docker images
