@@ -1,0 +1,65 @@
+  <html>
+    <head>
+       <title>LocoLocation</title>
+       <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+
+      <div class="container"><br>
+        <center>
+          <h1>Location Calculation</h1>
+          <h4>Find your exact coordinates!</h4>
+        </center>
+      </div>
+
+      <div class="container"><br>
+      <div class="row align-items-center justify-content-center">
+      <div class="col-md-4">
+        <form  action="" method="post" role="form">
+          {{ form.csrf }}
+          <div class="form-group">
+
+
+            <input type="text" class="form-control" id="Place" name="Place" placeholder="Enter any place e.g. China or Wellingborough">
+              <br>
+            <!-- <label for="long">Longitude:</label>
+            <input type="text" class="form-control" id="longitude" name="longitude" placeholder="Longitude?"> -->
+  	    <br>
+  	</div>
+          <br>
+
+          <center>
+            <button type="submit" class="btn btn-success">Find Coordinates</button>
+          </center>
+        </form>
+
+        <br>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+
+          {% for message in messages %}
+              {% if "Error" not in message[1]: %}
+                  <div class="alert alert-info">
+                  <strong>Success! </strong> {{ message[1] }}
+                  </div>
+              {% endif %}
+
+              {% if "Error" in message[1]: %}
+                  <div class="alert alert-danger">
+                  <strong>Error: </strong> {{ message[1] }}
+                  </div>
+              {% endif %}
+          {% endfor %}
+              {% endif %}
+          {% endwith %}
+
+      </div>
+      <br>
+      </div>
+      </div>
+    </body>
+  </html>
