@@ -64,11 +64,33 @@ Building and deploying the repository requires the folowing commands:
  This command was used to create the Docker image:
  
  <pre>
- sudo docker build -t gcr.io/${<b>enter your ID from the last step here</b>}/location .
+ sudo docker build -t <b>enter your prefered tag here</b> .
  </pre>
  You can check to see id the image was built with this command:
  ```
  sudo docker images
  ```
+ 
+ A dockerhub repository needs to made for the next step.
+ This can be made by simply making a dockerhub account and making a blank repository. A repository called **location** was made for this project and it is referenced in the code as **myrepo/location** where **myrepo** is the name of the dockerhub account
+ 
+ Pushing the image to the dockerhub goes as follows:
+ ```
+sudo docker image tag MyApp:latest myrepo/MyApp:latest
+sudo docker login 
+sudo docker push myrepo/MyApp:latest
+ ```
+You will be prompted to enter your login credentials at the second step.
+ 
+If successful, your image will be available in your repository under the 'Tags' heading
+ 
+ ![image](https://user-images.githubusercontent.com/68447389/162817499-e002014a-6869-4c5f-be59-bececc6b9c69.png)
+
+ 
+ 
+ 
+ 
+ 
+ 
  
  
