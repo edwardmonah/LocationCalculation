@@ -49,3 +49,26 @@ Building and deploying the repository requires the folowing commands:
 'tester' is of course an arbitrary tag and can be edited to any other phrase of your liking.
  (note: This application as it is will not run without a Cassandra database. After deploying your Cassandra Database, the IP and port number can be added to the app2.py file replacing the default values - 172.17.0.1:9042)
  
+ #Creating Docker image and pushing to Dockerhub
+ 
+ The following commands were used to create the docker image
+ ```
+ gcloud projects list
+```
+ was used to check for the ID of this project.
+ 
+ The project was then exported using:
+ ```
+ export PROJECT_ID= **enter your ID from the last step here**
+ ```
+ This command was used to create the Docker image:
+ 
+ ```
+ sudo docker build -t gcr.io/${**enter your ID from the last step here**}/location .
+ ```
+ You can check to see id the image was built with this command:
+ ```
+ sudo docker images
+ ```
+ 
+ 
