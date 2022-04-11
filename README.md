@@ -2,7 +2,7 @@
 
 A Cloud Computing mini project
 
-This is a simple app that informs a user of a location's corrdinates through LocationIQ's Geocoding
+This is a simple app that informs a user of a location's corrdinates through LocationIQ's Geocoding API
  
 # Overview
   
@@ -86,11 +86,16 @@ If successful, your image will be available in your repository under the 'Tags' 
  
  ![image](https://user-images.githubusercontent.com/68447389/162817499-e002014a-6869-4c5f-be59-bececc6b9c69.png)
 
+ # Deploying on Kubernetes
  
+ These steps can be followed to deploy the container using Kubernetes.
  
+```
+ kubectl create deployment newapp --image=location
+
+ kubectl expose deployment newapp --type=LoadBalancer  --port=80 --target-port=80 
  
- 
- 
+ ```
  
  
  
