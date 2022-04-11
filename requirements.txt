@@ -1,0 +1,5 @@
+Flask
+wtforms
+requests
+cassandra-driver
+pip
