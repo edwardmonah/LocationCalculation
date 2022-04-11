@@ -58,9 +58,9 @@ Building and deploying the repository requires the folowing commands:
  was used to check for the ID of this project.
  
  The project was then exported using:
- ```
- export PROJECT_ID= **enter your ID from the last step here**
- ```
+ <pre>
+ export PROJECT_ID= <b>enter your ID from the last step here</b>
+ </pre>
  This command was used to create the Docker image:
  
  <pre>
