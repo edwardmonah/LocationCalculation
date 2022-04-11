@@ -15,7 +15,9 @@ The user is prompted to input the name of a location into a html page, as shown 
 Cassandra is a database system which stores data across multiple services to avoid data loss, it is effectively data redundancy system with similar syntax to SQL.
  
 sudo docker run --name cass_cluster cassandra:latest --> Creates and runs writable container
+ 
 sudo docker start 4e780b0a9909488ffdc0ccb61df31f09643ce00e1fd4311a8494552ad5bda459 ---> starts container instance
+ 
 docker exec -it cass_cluster cqlsh ---> executes cassandra and allows us to interact with the database
 
 # Kubernetes
