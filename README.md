@@ -14,17 +14,24 @@ The user is prompted to input the name of a location into a html page, as shown 
 
 Cassandra is a database system which stores data across multiple services to avoid data loss, it is effectively data redundancy system with similar syntax to SQL.
  
+'''
 sudo docker run --name cass_cluster cassandra:latest --> Creates and runs writable container
- 
-sudo docker start 4e780b0a9909488ffdc0ccb61df31f09643ce00e1fd4311a8494552ad5bda459 ---> starts container instance
- 
-docker exec -it cass_cluster cqlsh ---> executes cassandra and allows us to interact with the database
+'''
 
+'''
+sudo docker start 4e780b0a9909488ffdc0ccb61df31f09643ce00e1fd4311a8494552ad5bda459 ---> starts container instance
+'''
+ 
+''' 
+docker exec -it cass_cluster cqlsh ---> executes cassandra and allows us to interact with the database
+'''
+ 
 # Kubernetes
 
 Kubernetes was used as a container management and load balancing tool as shown below. We use one cluster in which there are three nodes.
 
 ![image](https://user-images.githubusercontent.com/96924468/162695851-4400c7ef-b2e1-4456-b52c-39354b44f676.png)
  
-
+In order to deloy the app using Kubernetes the following steps need to be followed:
+ 
 
