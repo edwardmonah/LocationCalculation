@@ -28,7 +28,7 @@ sudo docker run -p 443:443 cassandrarest:v1 for https
 
 # Kubernetes
 
-Kubernetes was used as a container management and load balancing tool as shown below
+Kubernetes was used as a container management and load balancing tool as shown below. We use one cluster in which there are three nodes.
 
 ![image](https://user-images.githubusercontent.com/96924468/162695851-4400c7ef-b2e1-4456-b52c-39354b44f676.png)
  
